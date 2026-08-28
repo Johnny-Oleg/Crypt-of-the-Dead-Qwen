@@ -1,0 +1,21 @@
+# dependencies
+node_modules
+
+# build output (deployed by the Pages workflow, not committed)
+dist
+
+# editor / OS
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
+*.local
+*.log
+
+# env
+.env
+.env.*
+node_modules/
+.next/
+dist/
+build/

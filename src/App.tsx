@@ -367,8 +367,8 @@ export default function App() {
                             className={`inv-cell ${it ? "occupied" : ""}`}
                             onClick={() => it && g().clickItem(it.uid)}
                             onContextMenu={(e) => { e.preventDefault(); if (it) g().dropItem(it.uid); }}
-                            onMouseEnter={(e) => it && setTip({ item: it, x: e.clientX, y: e.clientY })}
-                            onMouseMove={(e) => tip?.item.uid === it?.uid && setTip({ item: it!, x: e.clientX, y: e.clientY })}
+                            onMouseEnter={(e) => { if (it) setTip({ item: it, x: e.clientX, y: e.clientY }); }}
+                            onMouseMove={(e) => { if (it) setTip({ item: it, x: e.clientX, y: e.clientY }); }}
                             onMouseLeave={() => setTip(null)}
                           >
                             {it && (
